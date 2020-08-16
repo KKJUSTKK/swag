@@ -14,6 +14,7 @@ dependencies:
   mongoose: 5.9.27
   ms: 2.1.2
   nekos.life: 2.0.7
+  node_module: 0.0.0
   novelcovid: 3.0.0
   opusscript: 0.0.7
   os: 0.1.1
@@ -1623,6 +1624,10 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-TwWAOZb0j7e9eGaf9esRx3ZcLaE5tQ2lvYy1pb5IAaG1a2e2Kv5Lms1Y4hpj+ciXJRofIxxlt5haeQ/2ANeE0Q==
+  /node_module/0.0.0:
+    dev: false
+    resolution:
+      integrity: sha1-Pcf9TMJTc7KQz951HtWfpXnMNsA=
   /noop-logger/0.1.1:
     dev: false
     resolution:
@@ -2476,6 +2481,7 @@ specifiers:
   mongoose: ^5.9.27
   ms: ^2.1.2
   nekos.life: ^2.0.7
+  node_module: ^0.0.0
   novelcovid: ^3.0.0
   opusscript: ^0.0.7
   os: ^0.1.1

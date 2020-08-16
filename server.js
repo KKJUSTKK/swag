@@ -48,6 +48,12 @@ client.on("message", async message => {
 
   if (command) command.run(client, message, args);
 });
+client.on("message", async message => {
+  if (message.content === "P!wtest") {
+    message.channel.send("Welcome Successfully Test!");
+    client.emit("guildMemberAdd", message.member);
+  }
+});
 
 
 client.on("guildMemberAdd", async (member) => {
