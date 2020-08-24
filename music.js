@@ -47,11 +47,7 @@ bot.on("message", async msg => {
       .setAuthor(bot.user.tag)
  .setThumbnail(bot.user.displayAvatarURL())
       .setDescription(`
-
-
-
-
-__**MUSIC COMMANDS**__9
+__**MUSIC COMMANDS**__
 
 > ${PREFIX}play 
 \`NAME OF SONG OR LINK OF SONG \`
@@ -77,19 +73,12 @@ __**MUSIC COMMANDS**__9
 
 > ${PREFIX}volume  
 \`SET VOLUME BETWEEN 1 TO 100\`
-
-
-
-
-
-`
-      )
+`)
       .setFooter(
-        "©️ PARAS GAMING YT",
-        ""
-      );
+        "©️ PARAS GAMING YT",);
     msg.channel.send(helpembed);
   }
+ 
   if (command === "play" || command === "p") {
     const voiceChannel = msg.member.voice.channel;
     if (!voiceChannel)
@@ -114,8 +103,8 @@ __**MUSIC COMMANDS**__9
         const video2 = await youtube.getVideoByID(video.id); // eslint-disable-line no-await-in-loop
         await handleVideo(video2, msg, voiceChannel, true); // eslint-disable-line no-await-in-loop
       }
-      return msg.channel.send(
-        `<:yes:591629527571234819>  **|**  Playlist: **\`${playlist.title}\`** has been added to the queue!`
+      return msg.channel.send(`
+        🤔 **|**  Playlist: **\`${playlist.title}\`** has been added to the queue!`
       );
     } else {
       try {
