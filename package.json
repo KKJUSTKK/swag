@@ -1,37 +1,42 @@
 {
-  
-  "name": "music-bot-tutorkal",
-  "version": "1.0.2",
-  "description": "A simple Node app built on Express, instantly up and running.",
-  "main": "music.js",
+  "name": "music-bot-example",
+  "version": "1.1.0",
+  "description": "A dedicated music bot example project for Zhycorp Development made by iCrawl",
+  "main": "index.js",
   "scripts": {
-    "start": "node music.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ."
   },
-  "dependencies": {
-    "express": "^4.17.1",
-    "discord.js": "^12.2.0",
-    "quick.db": "^7.1.1",
-    "moment": "^2.27.0",
-    "fs": "^0.0.2",
-    "path": "^0.12.7",
-    "dotenv": "^8.2.0",
-    "os": "^0.1.1",
-    "ms": "^2.1.2",
-    "simple-youtube-api": "^5.2.1",
-    "ytdl-core": "^3.2.1",
-    "opusscript": "^0.0.7",
-       "node_module": "^0.0.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhycorp/music-bot-example.git"
   },
+  "keywords": [
+    "JavaScript",
+    "NodeJS",
+    "Npm",
+    "Zhycorp"
+  ],
+  "author": "iCrawl",
+  "license": "by-nc-nd/4.0",
+  "bugs": {
+    "url": "https://github.com/zhycorp/music-bot-example/issues"
+  },
+  "homepage": "https://github.com/zhycorp/music-bot-example#readme",
   "engines": {
     "node": "12.x"
   },
-  "repository": {
-    "url": "https://glitch.com/edit/#!/hello-express"
+  "dependencies": {
+    "@discordjs/opus": "^0.3.2",
+    "discord.js": "^12.3.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "node-opus": "^0.3.3",
+    "opusscript": "0.0.7",
+    "simple-youtube-api": "^5.2.1",
+    "ytdl-core": "^3.2.1"
   },
-  "license": "MIT",
-  "keywords": [
-    "node",
-    "glitch",
-    "express"
-  ]
+  "optionalDependencies": {
+    "@discordjs/uws": "^11.149.1"
+  }
 }
