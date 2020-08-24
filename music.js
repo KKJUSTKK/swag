@@ -40,17 +40,40 @@ bot.on("message", async msg => {
   let command = msg.content.toLowerCase().split(" ")[0];
   command = command.slice(PREFIX.length);
 
-  if (command === "" || command == "") {
+  if (command = "help" || command == "commands") {
     const helpembed = new Discord.MessageEmbed()
       .setColor("#7289DA")
       .setAuthor(bot.user.tag, bot.user.displayAvatarURL())
-      .setDescription(
-        `
+      .setDescription(`
+
+
 __**Commands List**__
 > \`play\` > **\`play [title/url]\`**
 > \`search\` > **\`search [title]\`**
 > \`skip\`, \`stop\`,  \`pause\`, \`resume\`
-> \`nowplaying\`, \`queue\`, \`volume\``
+> \`nowplaying\`, \`queue\`, \`volume\`
+
+__**MUSIC COMMANDS**__
+
+> ${PREFIX}play :- NAME OF SONG OR LINK OF SONG
+
+> ${PREFIX}search :- SEARCH MUSIC 
+
+> ${PREFIX}skip :- SKIP THE PLAYING SONG
+
+> ${PREFIX}stop :-STOP THE PLAYING SONG
+
+> ${PREFIX}pause :- PAUSE THE SONG
+
+> ${PREFIX}resume :- RESUME THE SONG
+
+> ${PREFIX}
+
+
+
+
+
+`
       )
       .setFooter(
         "©️ 2020 Zealcord Development",
