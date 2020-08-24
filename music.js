@@ -3,6 +3,7 @@ const { Client, Util } = require("discord.js");
 const YouTube = require("simple-youtube-api");
 const ytdl = require("ytdl-core");
 const dotenv = require("dotenv").config();
+require("./uptime.js");
 
 const TOKEN = process.env.TOKEN;
 const PREFIX = process.env.PREFIX;
@@ -18,7 +19,7 @@ const queue = new Map();
 bot.on("warn", console.warn);
 bot.on("error", console.error);
 bot.on("ready", () =>
-  console.log(`${bot.user.tag} music is setup `)
+  console.log(`${bot.user.tag} IS ONLINE `)
 );
 bot.on("shardDisconnect", (event, id) =>
   console.log(
@@ -43,31 +44,39 @@ bot.on("message", async msg => {
   if (command = "help" || command == "commands") {
     const helpembed = new Discord.MessageEmbed()
       .setColor("#7289DA")
-      .setAuthor(bot.user.tag, bot.user.displayAvatarURL())
+      .setAuthor(bot.user.tag)
+ .setThumbnail(bot.user.displayAvatarURL())
       .setDescription(`
 
 
-__**Commands List**__
-> \`play\` > **\`play [title/url]\`**
-> \`search\` > **\`search [title]\`**
-> \`skip\`, \`stop\`,  \`pause\`, \`resume\`
-> \`nowplaying\`, \`queue\`, \`volume\`
 
-__**MUSIC COMMANDS**__
 
-> ${PREFIX}play :- NAME OF SONG OR LINK OF SONG
+__**MUSIC COMMANDS**__9
 
-> ${PREFIX}search :- SEARCH MUSIC 
+> ${PREFIX}play 
+\`NAME OF SONG OR LINK OF SONG \`
 
-> ${PREFIX}skip :- SKIP THE PLAYING SONG
+> ${PREFIX}search 
+\`SEARCH MUSIC \`
 
-> ${PREFIX}stop :-STOP THE PLAYING SONG
+> ${PREFIX}skip 
+\`SKIP THE PLAYING SONG\`
 
-> ${PREFIX}pause :- PAUSE THE SONG
+> ${PREFIX}stop 
+\`STOP THE PLAYING SONG\`
 
-> ${PREFIX}resume :- RESUME THE SONG
+> ${PREFIX}pause 
+\`PAUSE THE SONG\`
 
-> ${PREFIX}
+> ${PREFIX}resume 
+\`RESUME THE SONG\`
+
+> ${PREFIX}nowplaying  
+\`SHOW THE QUEUE OF SONGS \`
+
+
+> ${PREFIX}volume  
+\`SET VOLUME BETWEEN 1 TO 100\`
 
 
 
@@ -76,8 +85,8 @@ __**MUSIC COMMANDS**__
 `
       )
       .setFooter(
-        "©️ 2020 Zealcord Development",
-        "https://app.zealcord.xyz/assets/Logo.png"
+        "©️ PARAS GAMING YT",
+        ""
       );
     msg.channel.send(helpembed);
   }
